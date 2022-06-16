@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolmate</title>
+    <link rel="stylesheet" href="./assets/css/AddminBase.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="wrap" style="width: 100%; height: 100%;overflow: hidden;">
+        <div class="header">
+            <a href="./category.html" class="logo" style="height:36px;width: 100px;">
+                <img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="">
+            </a>
+            <a class="logout" href="./Login.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </div>
+        <div style="display:flex;">
+            <div class="navbar">
+
+                <a href="./category.html" class="category-option navbar-item">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Loại sản phẩm
+                </a>
+                <a href="./product.html"class="product-option navbar-item" >
+                    <i class="fa-solid fa-shirt"></i>
+                    Sản phẩm
+                </a>
+                <a href="./customer.html"class="exportBill-option navbar-item">
+                    <i class="fa-solid fa-users"></i>
+                    Khách hàng
+                </a>
+                <a href="./staff.html"class="exportBill-option navbar-item">
+                    <i class="fa-solid fa-user-gear"></i>
+                    Nhân viên
+                </a>
+                <a href="./import-bill.html" class="exportBill-option navbar-item">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Hóa đơn nhập
+                </a>
+                <div class="exportBill-option navbar-item"  style="background-color:#d9d9d9;color:#011e39;position: relative;">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Đơn đặt hàng
+                    <ul class="exportBill-list">
+                        <li class="exportBill-item"><a href="./Paied.html">Đã thanh toán</a></li>
+                        <li class="exportBill-item"><a href="./watingForProcess.html">Chờ xử lý</a></li>
+                        <li class="exportBill-item"><a href="./transporting.html">Đang vận chuyển</a></li>
+                        <li style="background-color:#d9d9d9;color:#011e39;" class="exportBill-item"><a href="./Deleted.html">Đă hủy</a></li>
+                    </ul>
+                </div>
+                <a href="./report.html"class="report-option navbar-item">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Báo cáo
+                </a>
+            </div>
+    
+            <div style="display:flex;flex:1;padding:15px 10px 10px;background-color: #f6f5f5; position: relative;">            
+                <div class="info col p-3" style="padding-right: 20px;">
+                    <div class="info-heading">
+                        Tìm kiếm đơn đặt hàng đã hủy
+                    </div>
+                    <form action="">
+                        <label for="input-Ma">Mã đơn đặt hàng</label>
+                        <input type="text" id="input-Ma" placeholder="Tìm kiếm theo mã hóa đơn">
+                        <label for="input-MaKhachHang">Mã khách hàng</label>
+                        <input type="text" id="input-Ma" placeholder="Tìm kiếm theo mã khách hàng">                       
+                        <div style="margin-top: 25px;">
+                            <button class="btn-form" style="background-color: rgb(20 62 139 / 80%);width:100%;margin:0;"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="list col p-9">
+
+                    <div class="list-bill">
+                        <div class="list-heading">
+                            Danh sách đơn đặt hàng đã hủy
+                        </div>
+                        <table >
+                            <thead>
+                                <tr>
+                                    <th style="width:15%;">Mã đơn đặt hàng</th>
+                                    <th style="width:12%;">Mã nhân viên</th>
+                                    <th style="width:15%;">Mã khách hàng</th>
+                                    <th style="width:12%;">Ngày đặt hàng</th>
+                                    <th style="width:15%;">Tổng tiền</th>
+                                    <th>Trạng thái</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ondblclick="showDetail('DDH001')" title="Nháy chuột 2 lần để xem chi tiết">
+                                    
+                                    <td style="width:15%;">DDH001</td>
+                                    <td style="width:14%;">NV001</td>
+                                    <td style="width:15%;">KH001</td>
+                                    <td style="width:12%;">3/3/2022</td>
+                                    <td style="width:15%;">450.000đ</td>
+                                    <td>
+                                        <select name="" class="change-status">
+                                            <option value="4">Đã hủy</option>
+                                            <option value="0">Đã thanh toán</option>
+                                            <option value="1">Chờ xử lý</option>
+                                            <option value="2">Đang vận chuyển</option>
+                                            
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr ondblclick="showDetail('DDH002')" title="Nháy chuột 2 lần để xem chi tiết">
+                                    
+                                    <td style="width:15%;">DDH002</td>
+                                    <td style="width:14%;">NV001</td>
+                                    <td style="width:15%;">KH001</td>
+                                    <td style="width:12%;">3/3/2022</td>
+                                    <td style="width:15%;">450.000đ</td>
+                                    <td>
+                                        <select name="" class="change-status" >
+                                            <option value="4">Đã hủy</option>
+                                            <option value="0">Đã thanh toán</option>
+                                            <option value="1">Chờ xử lý</option>
+                                            <option value="2">Đang vận chuyển</option>
+                                            
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr ondblclick="showDetail('DDH003')" title="Nháy chuột 2 lần để xem chi tiết">
+                                    
+                                    <td style="width:15%;">DDH003</td>
+                                    <td style="width:14%;">NV001</td>
+                                    <td style="width:15%;">KH001</td>
+                                    <td style="width:12%;">3/3/2022</td>
+                                    <td style="width:15%;">450.000đ</td>
+                                    <td>
+                                        <select name="" class="change-status" >
+                                            <option value="4">Đã hủy</option>
+                                            <option value="2">Đang vận chuyển</option>
+                                            <option value="0">Đã thanh toán</option>
+                                            <option value="1">Chờ xử lý</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr ondblclick="showDetail('DDH004')" title="Nháy chuột 2 lần để xem chi tiết">
+                                    
+                                    <td style="width:15%;">DDH004</td>
+                                    <td style="width:14%;">NV001</td>
+                                    <td style="width:15%;">KH001</td>
+                                    <td style="width:12%;">3/3/2022</td>
+                                    <td style="width:15%;">450.000đ</td>
+                                    <td>
+                                        <select name="" class="change-status" >
+                                            <option value="4">Đã hủy</option>
+                                            <option value="1">Chờ xử lý</option>
+                                            <option value="0">Đã thanh toán</option>
+                                            <option value="2">Đang vận chuyển</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr ondblclick="showDetail('DDH005')" title="Nháy chuột 2 lần để xem chi tiết">
+                                    
+                                    <td style="width:15%;">DDH005</td>
+                                    <td style="width:14%;">NV001</td>
+                                    <td style="width:15%;">KH001</td>
+                                    <td style="width:12%;">3/3/2022</td>
+                                    <td style="width:15%;">450.000đ</td>
+                                    <td>
+                                        <select name="" class="change-status">
+                                            <option value="4">Đã hủy</option>
+                                            <option value="1">Chờ xử lý</option>
+                                            <option value="0">Đã thanh toán</option>
+                                            <option value="2">Đang vận chuyển</option>
+
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                        <div class="page">
+                            <p>Số đơn đặt hàng: <span class="page-quantity">5</span></p>
+                            <ul>
+                                <li class="btn-page"><i class="fa-solid fa-angle-left"></i></li>
+                                <li class="btn-page">1</li>
+                                <li class="btn-page">2</li>
+                                <li class="btn-page">3</li>
+                                <li class="btn-page">4</li>
+                                <li class="btn-page"><i class="fa-solid fa-angle-right"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="list-detail">
+                        <div class="list-heading-detail list-heading">
+                            Chi tiết đơn đặt hàng                          
+                        </div>
+                        <table>
+                            <tr>
+                                <th>Mã sản phẩm</th>
+                                <th style="width:25%;">Tên sản phẩm</th>
+                                <th>Màu</th>
+                                <th>Kích thước</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                            <tr>
+                                <td>SP003</td>
+                                <td style="width:25%;">Áo polo cafe</td>
+                                <td>Đen</td>
+                                <td>M</td>
+                                <td style="width:12%;">399.000đ</td>
+                                <td>2</td>
+                                <td style="width:12%;">798.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>SP002</td>
+                                <td style="width:25%;">Áo T-shirt</td>
+                                <td>Trắng</td>
+                                <td>M</td>
+                                <td style="width:12%;">399.000đ</td>
+                                <td>2</td>
+                                <td style="width:12%;">798.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>SP004</td>
+                                <td style="width:25%;">Áo ba lỗ hè 2022</td>
+                                <td>Xanh</td>
+                                <td>M</td>
+                                <td style="width:12%;">100.000đ</td>
+                                <td>2</td>
+                                <td style="width:12%;">200.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>SP009</td>
+                                <td style="width:25%;">Quần excool</td>
+                                <td>Xanh biển</td>
+                                <td>XL</td>
+                                <td style="width:12%;">399.000đ</td>
+                                <td>2</td>
+                                <td style="width:12%;">798.000đ</td>
+                            </tr>
+                        </table>
+                        <div style="text-align:right;padding:0 10px;">
+                            <button class="btn-back">Quay lại</button>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(".list-detail").hide()
+
+        $(".btn-back").click(function(){
+            $(".list-bill").show()
+            $(".list-detail").hide()
+        })
+
+        $(".change-status").change(function(){
+            if(!(confirm("Bạn có muốn cập nhật trạng thái không"))){
+                $(this).val()
+            }
+        })
+        function deleteAll(){           
+            if(confirm("Bạn chắc chắn muốn xóa những loại được check!")){
+                
+            }
+        }
+
+        function showDetail(id){
+            $(".list-bill").hide()
+            $(".list-detail").show()
+            $(".list-heading-detail").text("Chi tiết đơn đặt hàng "+ id)
+        }
+    </script>
+</body>
+</html>

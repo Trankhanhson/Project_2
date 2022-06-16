@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+}
+.form-wrap{
+    background-image:url(../img/R.jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+.login{
+    background-color: rgba(0,0,0,0.6);
+    border-radius:16px;   
+    color:#fff;
+    width: 350px;
+    padding:30px 30px 80px;
+    position: relative;
+    
+}
+.input-wrap{
+    position: relative;
+
+}
+
+.input-wrap input{
+    width: 100%;
+    border: none;
+    outline: none;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius:5px;
+    padding-left: 10px;
+}
+
+.submit-login,
+.submit-missPass{
+    border: none;
+    background-color:#2F5ACF;
+    height: 35px;
+    width: calc(100% - 60px);
+    color:#fff;
+    border-radius:5px;
+    position: absolute;
+    left:50%;
+    transform:translateX(-50%);
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 40px;
+}
+.submit-login:hover,
+.submit-missPass:hover{
+    background-color:#d9d9d9;
+    color: #000;
+}
+
+.btn-forgetPassword{
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: normal;
+}
+
+.btn-forgetPassword:hover{
+    text-decoration: underline;
+}
+.missPass{
+    background-color: rgba(0,0,0,0.6);
+    border-radius:16px;   
+    color:#fff;
+    width: 400px;
+    padding:30px 30px 100px;
+    position: relative;
+    display:none;
+}
+
+.btn-login{
+    cursor: pointer;
+    transition: all 0.2s;
+    font-weight: 500;
+}
+.btn-login:hover{
+    text-decoration: underline;
+}

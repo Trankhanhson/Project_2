@@ -1,0 +1,23 @@
+.overview-header{
+    line-height:30px;
+    color:var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    width: 250px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.overview-content{
+    padding-left: 20px;
+}
+.overview-item{
+    width: 30%;
+    border-radius:5px;
+    padding:15px;
+    background-color:#fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.overview-item span{
+    font-size: 16px;
+}

@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolmate</title>
+    <link rel="stylesheet" href="./assets/css/AddminBase.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/report.css">
+</head>
+<body>
+    <div class="wrap" style="width: 100%; height: 100%;overflow: hidden;">
+        <div class="header">
+            <a href="./category.html" class="logo" style="height:36px;width: 100px;">
+                <img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="">
+            </a>
+            <a class="logout" href="./Login.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </div>
+        <div style="display:flex;">
+            <div class="navbar">
+                <a href="./category.html" class="category-option navbar-item">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Loại sản phẩm
+                </a>
+                <a href="./product.html"class="product-option navbar-item" >
+                    <i class="fa-solid fa-shirt"></i>
+                    Sản phẩm
+                </a>
+                <a href="./customer.html"class="staff-option navbar-item" >
+                    <i class="fa-solid fa-users"></i>
+                    Khách hàng
+                </a>
+                <a href="./staff.html"class="staff-option navbar-item" >
+                    <i class="fa-solid fa-user-gear"></i>
+                    Nhân viên
+                </a>
+                <a href="./import-bill.html" class="importBill-option navbar-item">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Hóa đơn nhập
+                </a>
+                <div class="exportBill-option navbar-item"  style="position: relative;">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Đơn đặt hàng
+                    <ul class="exportBill-list">
+                        <li class="exportBill-item"><a href="./Paied.html">Đã thanh toán</a></li>
+                        <li class="exportBill-item"><a href="./watingForProcess.html">Chờ xử lý</a></li>
+                        <li class="exportBill-item"><a href="./transporting.html">Đang vận chuyển</a></li>
+                        <li class="exportBill-item"><a href="./Deleted.html">Đă hủy</a></li>
+                    </ul>
+                </div>
+                <a href="./report.html"class="report-option navbar-item" style="background-color:#d9d9d9;color:#011e39;">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Báo cáo
+                </a>
+            </div>
+    
+            <div style="flex: 1;padding:0 20px 0 30px">
+                <div class="report__header">
+                    <h3>Thống kê</h3>
+                    <button class="btn__report-today">Hôm nay</button>
+                    <select name="" class="select-table">
+                        <option  value="0">Dạng bảng</option>
+                        <option value="table-week">Theo tuần</option>
+                        <option value="table-year">Theo năm</option>
+                    </select>
+                    <select name="" class="select-chart">
+                        <option value="0">Dạng biểu đồ</option>
+                        <option value="chart-week">Theo tuần</option>
+                        <option value="chart-year">Theo năm</option>
+                    </select>
+                </div>
+                <div class="report-today content-body active">
+                    <div class="report-today__item" style="border: 1px solid rgba(44, 140, 15, 0.8); background-color:rgba(44, 140, 15, 0.05);">
+                        Doanh thu: 20.000.000đ
+                    </div>
+                    <div class="report-today__item" style="border: 1px solid rgba(227, 32, 21, 0.8);background-color: rgba(227, 32, 21, 0.05);">
+                        Lợi nhuận: 2.000.000đ
+                    </div>
+                    <div class="report-today__item" style="border: 1px solid  rgba(14, 87, 224, 0.8);background-color: rgba(14, 87, 224, 0.05);">
+                        Số đơn đặt hàng: 800
+                    </div>
+                </div>
+                <div class="table-week content-body">
+                    <table>
+                        <thead>
+                            <th>Thứ</th>
+                            <th>Doanh thu</th>
+                            <th>Lợi nhuận gộp</th>
+                            <th>Lợi nhuận thuần</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Thứ 2</td>
+                                <td>300.000.000đ</td>
+                                <td>20.000.000đ</td>
+                                <td>15.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Thứ 3</td>
+                                <td>400.000.000đ</td>
+                                <td>30.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Thứ 4</td>
+                                <td>350.000.000đ</td>
+                                <td>22.000.000đ</td>
+                                <td>17.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Thứ 5</td>
+                                <td>350.000.000đ</td>
+                                <td>45.000.000đ</td>
+                                <td>25.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Thứ 6</td>
+                                <td>300.000.000đ</td>
+                                <td>20.000.000đ</td>
+                                <td>15.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Thứ 7</td>
+                                <td>300.000.000đ</td>
+                                <td>20.000.000đ</td>
+                                <td>15.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Chủ nhật</td>
+                                <td>300.000.000đ</td>
+                                <td>20.000.000đ</td>
+                                <td>15.000.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-year content-body">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tháng</th>
+                                <th>Doanh thu</th>
+                                <th>Lợi nhuận gộp</th>
+                                <th>Lợi nhuận thuần</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tháng 1</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 2</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 3</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 4</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 5</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 6</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 7</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 8</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 9</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 10</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 11</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                            <tr>
+                                <td>Tháng 12</td>
+                                <td>300.000.000đ</td>
+                                <td>40.000.000đ</td>
+                                <td>20.000.000đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="chart-week content-body">
+                    <div class="chart">
+                        <div class="chart-line">
+                            <div class="line">
+                                <span>1 tỉ</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>900 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>800 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>700 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>600 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>500 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>400 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>300 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>200 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>100 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>0</span>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="report-week" >
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:56%;"></div>
+                                <div class="profit" style="--percent:25%;"></div>
+                                <div class="rank">Thứ 2</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:60%;"></div>
+                                <div class="profit" style="--percent:28%;"></div>
+                                <div class="rank">Thứ 3</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:65%;"></div>
+                                <div class="profit" style="--percent: 30%;"></div>
+                                <div class="rank">Thứ 4</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:68%;"></div>
+                                <div class="profit" style="--percent:34%;"></div>
+                                <div class="rank">Thứ 5</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:80%;"></div>
+                                <div class="profit" style="--percent:45%;"></div>
+                                <div class="rank">Thứ 6</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:53%;"></div>
+                                <div class="profit" style="--percent:20%;"></div>
+                                <div class="rank">Thứ 7</div>
+                            </div>
+                            <div class="column-week">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Chủ nhật</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;padding-left:20px;display: flex;">
+                        <div style="display:flex;align-items: center;margin-bottom: 10px;">
+                            <div style="width: 60px;height:30px; background-color: #2a6ffa;margin-right:10px; border:1px solid #6d6d6d;"></div>
+                            <span>Doanh thu</span>
+                        </div>
+                        <div style="display:flex;align-items: center;margin:0 0 10px 20px;">
+                            <div style="width: 60px;height:30px; background-color: #f07451;margin-right:10px; border:1px solid #6d6d6d;"></div>
+                            <span>Lợi nhuận</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-year content-body">
+                    <div class="chart">
+                        <div class="chart-line">
+                            <div class="line">
+                                <span>1 tỉ</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>900 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>800 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>700 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>600 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>500 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>400 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>300 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>200 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>100 tr</span>
+                                <div></div>
+                            </div>
+                            <div class="line">
+                                <span>0</span>
+                                <div></div>
+                            </div>
+                        </div>
+                        <div class="report-year">
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:56%;"></div>
+                                <div class="profit" style="--percent:25%;"></div>
+                                <div class="rank">Tháng 1</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:60%;"></div>
+                                <div class="profit" style="--percent:28%;"></div>
+                                <div class="rank">Tháng 2</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:65%;"></div>
+                                <div class="profit" style="--percent: 30%;"></div>
+                                <div class="rank">Tháng 3</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:68%;"></div>
+                                <div class="profit" style="--percent:34%;"></div>
+                                <div class="rank">Tháng 4</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:80%;"></div>
+                                <div class="profit" style="--percent:45%;"></div>
+                                <div class="rank">Tháng 5</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:53%;"></div>
+                                <div class="profit" style="--percent:20%;"></div>
+                                <div class="rank">Tháng 6</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 7</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 8</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 9</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 10</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 11</div>
+                            </div>
+                            <div class="column-year">
+                                <div class="turnover" style="--percent:40%;"></div>
+                                <div class="profit" style="--percent:10%;"></div>
+                                <div class="rank">Tháng 12</div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <div style="margin-top: 40px;padding-left:20px;display: flex;">
+                        <div style="display:flex;align-items: center;margin-bottom: 10px;">
+                            <div style="width: 60px;height:30px; background-color: #2a6ffa;margin-right:10px; border:1px solid #6d6d6d;"></div>
+                            <span>Doanh thu</span>
+                        </div>
+                        <div style="display:flex;align-items: center;margin:0 0 10px 20px;">
+                            <div style="width: 60px;height:30px; background-color: #f07451;margin-right:10px; border:1px solid #6d6d6d;"></div>
+                            <span>Lợi nhuận</span>
+                        </div>
+                    </div>
+                </div>           
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function resetSelectTable(){
+            $('.select-table').html('<option  value="0">Dạng bảng</option><option value="table-week">Theo tuần</option><option value="table-year">Theo năm</option>');
+        }
+        function resetSelectChart(){
+            $(".select-chart").html('<option value="0">Dạng biểu đồ</option><option value="chart-week">Theo tuần</option><option value="chart-year">Theo năm</option>')
+            
+        }
+
+        $(".btn__report-today").click(function(){
+            $(".content-body").removeClass("active")
+            $(".report-today").addClass("active")
+            $(this).css("background","#f0f0f0")
+            resetSelectChart()
+            resetSelectTable()
+        })
+        
+        $("select").change(function(){
+            $(".content-body").removeClass("active")
+            $(".btn__report-today").css("background","#fff")
+            let value=$(this).val()
+            if(value=="table-week"){
+                $(".table-week").addClass("active")
+                resetSelectChart()
+            }
+            else if(value=="table-year"){
+                $(".table-year").addClass("active")
+                resetSelectChart()
+            }
+            else if(value=="chart-week"){
+                $(".chart-week").addClass("active")
+                resetSelectTable()
+            }
+            else if(value=="chart-year"){
+                $(".chart-year").addClass("active")
+                resetSelectTable()
+            }
+        })
+    </script>

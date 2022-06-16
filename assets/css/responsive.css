@@ -1,0 +1,115 @@
+/*Mobile & Tablet*/
+@media (max-width:1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+    .display-on-mobile-tablet{
+        display: block;
+    }
+    .slide-promotion{
+        width: 90%;
+        margin: 0 0 10px;
+    }
+    .slide-promotion-wrap{
+        flex-wrap: wrap;
+    }
+    .coolmate-basis{
+        height:auto;
+    }
+    .footer-top-left ul{
+        padding-right: 10px;
+    }
+    .footer-top-left{
+        padding-right:10px;
+    }
+    .about-cart__content{
+        padding:70px 40px 0px 60px;
+    }
+    .about-cart__content h1{
+        font-size: 21px;
+        margin-bottom: 40px;
+    }
+    .about-cart-btn{
+        bottom:5%;
+    }
+    .coolmate-basis h1{
+        font-size: 30px;
+    }
+    .coolmate-basis__content{
+        margin: 0 auto 20px;
+    }
+    .homepage-collection{
+        margin-top: 90px;
+    }
+}
+
+/*Tablet*/
+@media (min-width:740px) and (max-width:1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+    .display-on-tablet{
+        display: block;
+    }
+    
+}
+
+/*Mobile*/
+@media (max-width:739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .display-on-mobile{
+        display: block;
+    }
+    .footer-top-left{
+        display: none;
+    }
+    .bestseller__navbar-list{
+        width: auto;
+    }
+    .header-inner {
+        padding:0 10px;
+    }
+    .footer-top-right {
+        width: 100%;
+    }
+    .about-cart__content{
+        padding:10px 10px 0 10px;
+    }
+    .about-cart__content p{
+        display: none;
+    }
+    .about-cart-btn{
+        line-height: 30px;
+        padding: 0 10px;
+        left: 32px;
+    }
+    .about-cart {
+        border-radius: 20px;
+    }
+    .about-cart__img {
+        border-radius: 20px;
+    }
+    .coolmate-basis__content-link {
+        width: 200px;
+    }
+
+    .hompage-caption{
+        display: none;  
+    }
+    .row{
+        margin-top:20px;
+    }
+    .footer-top {
+        height:auto;
+        padding-bottom: 30px;
+    }
+    .footer-bottom {
+        display: none;
+    }
+    .coolmate-basis__content{
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}

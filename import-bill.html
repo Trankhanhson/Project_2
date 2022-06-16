@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolmate</title>
+    <link rel="stylesheet" href="./assets/css/AddminBase.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+</head>
+<body>
+    <div class="wrap" style="width: 100%; height: 100%;overflow: hidden;">
+        <div class="header">
+            <a href="./category.html" class="logo" style="height:36px;width: 100px;">
+                <img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="">
+            </a>
+            <a class="logout" href="./Login.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </div>
+        <div style="display:flex;">
+            <div class="navbar">
+
+                <a href="./category.html" class="category-option navbar-item">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Loại sản phẩm
+                </a>
+                <a href="./product.html"class="product-option navbar-item" >
+                    <i class="fa-solid fa-shirt"></i>
+                    Sản phẩm
+                </a>
+                <a href="./customer.html"class="exportBill-option navbar-item">
+                    <i class="fa-solid fa-users"></i>
+                    Khách hàng
+                </a>
+                <a href="./staff.html"class="exportBill-option navbar-item">
+                    <i class="fa-solid fa-user-gear"></i>
+                    Nhân viên
+                </a>
+                <a href="./import-bill.html" class="exportBill-option navbar-item" style="background-color:#d9d9d9;color:#011e39;">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Hóa đơn nhập
+                </a>
+                <div class="exportBill-option navbar-item"  style="position: relative;">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Đơn đặt hàng
+                    <ul class="exportBill-list">
+                        <li class="exportBill-item"><a href="./Paied.html">Đã thanh toán</a></li>
+                        <li class="exportBill-item"><a href="./watingForProcess.html">Chờ xử lý</a></li>
+                        <li class="exportBill-item"><a href="./transporting.html">Đang vận chuyển</a></li>
+                        <li class="exportBill-item"><a href="./Deleted.html">Đă hủy</a></li>
+                    </ul>
+                </div>
+                <a href="./report.html"class="report-option navbar-item">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Báo cáo
+                </a>
+            </div>
+
+            <div class="importBill-main" style="flex: 1;padding:15px 20px 10px;background-color: #f6f5f5;">
+                <div class="row" >
+                    <div class="info col p-3">
+                        <div class="info-heading">
+                            Tìm kiếm hóa đơn nhập
+                        </div>
+                        <form action="">
+                            <label for="input-Ma">Mã hóa đơn nhập</label>
+                            <input type="text" id="input-Ma" placeholder="Tìm kiếm theo mã hóa đơn nhập">
+                            <label for="input-Ngaynhap">Ngày nhập</label>
+                            <input type="text" id="input-Ngaynhap" placeholder="Tìm kiếm theo ngày nhập">
+                            <div style="margin-top: 25px;">
+                                <button class="btn-form btn-search" style="background-color: rgb(20 62 139 / 80%);width:100%;margin:0;"><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+                            </div>
+                        </form>
+                        
+                    </div>
+                    <div class="list col p-9">                    
+                        <div class="list-bill">
+                            <div class="list-heading">
+                                Danh sách hóa đơn nhập
+                                <div>
+                                    <button class="btn-add" style="background-color: rgb(20 62 139 / 80%);">
+                                        Thêm hóa đơn nhập
+                                    </button>
+                                    <button style="display:none;">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                        Xóa
+                                    </button>
+                                </div>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <!-- <th style="width:6%;">Check</th> -->
+                                        <th>Mã hóa đơn nhập</th>
+                                        <th>Mã nhân viên</th>
+                                        <th>Ngày nhập</th>
+                                        <th style="width:30%;">Tổng tiền</th>
+                                        <th>Thao tác</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr ondblclick="showDetail('HDN001')" title="nháy đúp 2 lần để xem chi tiết">
+                                        <!-- <td style="width:6%;">
+                                            <div style="height:100%; display:flex; justify-content: center;">
+                                                <input type="checkbox" class="checkbox">
+                                            </div>
+                                        </td> -->
+                                        <td >HDN001</td>
+                                        <td >NV008</td>
+                                        <td>3/8/2022</td>
+                                        <td style="width:30%;">1.100.000đ</td>
+                                        <td style="width:15%;">
+                                            <div style="display:flex; justify-content:center;">
+                                                <i title="Xóa" class="fa-solid fa-trash-can"></i>
+                                            </div>
+                                        </td>
+                                       
+                                    </tr>
+                                    <tr ondblclick="showDetail('HDN002')" title="nháy đúp 2 lần để xem chi tiết">
+                                        <!-- <td style="width:6%;">
+                                            <div style="height:100%; display:flex; justify-content: center;">
+                                                <input type="checkbox" class="checkbox">
+                                            </div>
+                                        </td> -->
+                                        <td >HDN002</td>
+                                        <td >NV007</td>
+                                        <td>30/3/2022</td>
+                                        <td style="width:30%;">1.300.000đ</td>
+                                        <td style="width:15%;">
+                                            <div style="display:flex; justify-content:center;">
+                                                <i title="Xóa" class="fa-solid fa-trash-can"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr ondblclick="showDetail('HDN003')" title="nháy đúp 2 lần để xem chi tiết">
+                                        <!-- <td style="width:6%;">
+                                            <div style="height:100%; display:flex; justify-content: center;">
+                                                <input type="checkbox" class="checkbox">
+                                            </div>
+                                        </td> -->
+                                        <td >HDN003</td>
+                                        <td >NV001</td>
+                                        <td>15/3/2022</td>
+                                        <td style="width:30%;">450.000đ</td>
+                                        <td style="width:15%;">
+                                            <div style="display:flex; justify-content:center;">
+                                                <i title="Xóa" class="fa-solid fa-trash-can"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr ondblclick="showDetail('HDN004')" title="nháy đúp 2 lần để xem chi tiết">
+                                        <!-- <td style="width:6%;">
+                                            <div style="height:100%; display:flex; justify-content: center;">
+                                                <input type="checkbox" class="checkbox">
+                                            </div>
+                                        </td> -->
+                                        <td >HDN004</td>
+                                        <td >NV002</td>
+                                        <td>24/3/2022</td>
+                                        <td style="width:30%;">700.000đ</td>
+                                        <td style="width:15%;">
+                                            <div style="display:flex; justify-content:center;">
+                                                <i title="Xóa" class="fa-solid fa-trash-can"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr ondblclick="showDetail('HDN005')" title="nháy đúp 2 lần để xem chi tiết">
+                                        <!-- <td style="width:6%;">
+                                            <div style="height:100%; display:flex; justify-content: center;">
+                                                <input type="checkbox" class="checkbox">
+                                            </div>
+                                        </td> -->
+                                        <td >HDN005</td>
+                                        <td >NV003</td>
+                                        <td>3/3/2022</td>
+                                        <td style="width:20%;">1.200.000đ</td>
+                                        <td style="width:15%;">
+                                            <div style="display:flex; justify-content:center;">
+                                                <i title="Xóa" class="fa-solid fa-trash-can"></i>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                                
+                            </table>
+                            <div class="page">
+                                <p>Số hóa đơn nhập: <span class="page-quantity">5</span></p>
+                                <ul>
+                                    <li class="btn-page"><i class="fa-solid fa-angle-left"></i></li>
+                                    <li class="btn-page">1</li>
+                                    <li class="btn-page">2</li>
+                                    <li class="btn-page">3</li>
+                                    <li class="btn-page">4</li>
+                                    <li class="btn-page"><i class="fa-solid fa-angle-right"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="list-detail">
+                            <div class="list-heading-detail list-heading">
+                                Chi tiết hóa đơn nhập HDN001
+                            </div>
+                            <table>
+                                <tr>
+                                    <th>Mã sản phẩm</th>
+                                    <th style="width:25%;">Tên sản phẩm</th>
+                                    <th>Màu</th>
+                                    <th>Kích thước</th>
+                                    <th>Đơn giá nhập</th>
+                                    <th>Đơn giá bán</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                                <tr>
+                                    <td>SP003</td>
+                                    <td style="width:25%;">Áo polo cafe</td>
+                                    <td>Đen</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">399.000đ</td>
+                                    <td style="width:12%;">450.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">798.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>SP002</td>
+                                    <td style="width:25%;">Áo T-shirt</td>
+                                    <td>Trắng</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">399.000đ</td>
+                                    <td style="width:12%;">415.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">798.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>SP004</td>
+                                    <td style="width:25%;">Áo ba lỗ hè 2022</td>
+                                    <td>Xanh</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">100.000đ</td>
+                                    <td style="width:12%;">150.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">200.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>SP009</td>
+                                    <td style="width:25%;">Quần excool</td>
+                                    <td>Xanh biển</td>
+                                    <td>XL</td>
+                                    <td style="width:12%;">399.000đ</td>
+                                    <td style="width:12%;">450.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">798.000đ</td>
+                                </tr>
+                            </table>
+                            <div style="text-align:right;padding:0 10px;">
+                                <button class="btn-back">Quay lại</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>           
+            <div class="add-importBill" style="flex: 1;padding:15px 20px 10px;background-color: #f6f5f5;">
+                <div class="row" >
+                    <div class="info col p-2">
+                        <form action="">
+                            <label for="input-Ma">Mã hóa đơn nhập</label>
+                            <input type="text" id="input-Ma" placeholder="Có thể tạo tự động">
+                            <label for="input-Ngaynhap">Ngày nhập</label>
+                            <input type="text" id="input-Ngaynhap" placeholder="Ngày nhập hàng">
+                            <label for="input-maNV">Mã nhân viên</label>
+                            <input type="text" id="input-maNV" placeholder="Mã nhân viên nhập hàng">
+                            <label for="input-tongtien">Tổng tiền</label>
+                            <input type="text" id="input-tongtien" placeholder="" disabled>
+                            <div style="margin-top: 25px;">
+                                <button class="btn-form" style="background-color: rgb(20 62 139 / 80%);width:100%;margin:0;">Thêm hóa đơn nhập</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="info col p-3">
+                        <form action="">
+                            <label for="input-MaSP">Mã sản phẩm</label>
+                            <input type="text" id="input-MaSP" placeholder="Chọn mã sản phẩm">
+                            <label for="input-Ten">Tên sản phẩm</label>
+                            <input type="text" id="input-Ten" placeholder="Tên sản phẩm" disabled>
+                            <label for="input-gianhap">Đơn giá nhập</label>
+                            <input type="text" id="input-gianhap" placeholder="Đơn giá nhập mới">
+                            <label for="input-giaban">Đơn giá bán</label>
+                            <input type="text" id="input-giaban" placeholder="Đơn giá bán mới">
+                            <label for="input-soluong">Số lượng</label>
+                            <input type="text" id="input-soluong" placeholder="Số lượng nhập">
+                            <label for="input-thanhtien">Thành tiền</label>
+                            <input type="text" id="input-thanhtien" placeholder="" disabled>
+                            <div style="margin-top: 25px;">
+                                <button class="btn-form" style="background-color: rgb(31 115 9 / 0.8);width:100%;margin:0;">Thêm chi tiết</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div style="margin-top:38px;" class="col p-7">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Mã sản phẩm</th>
+                                    <th style="width:25%;">Tên sản phẩm</th>
+                                    <th>Màu</th>
+                                    <th>Kích thước</th>
+                                    <th>Đơn giá nhập</th>
+                                    <th>Đơn giá bán</th>
+                                    <th>Số lượng</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SP003</td>
+                                    <td style="width:25%;">Áo polo cafe</td>
+                                    <td>Đen</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">399.000đ</td>
+                                    <td style="width:12%;">450.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">798.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>SP002</td>
+                                    <td style="width:25%;">Áo T-shirt</td>
+                                    <td>Trắng</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">399.000đ</td>
+                                    <td style="width:12%;">415.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">798.000đ</td>
+                                </tr>
+                                <tr>
+                                    <td>SP004</td>
+                                    <td style="width:25%;">Áo ba lỗ hè 2022</td>
+                                    <td>Xanh</td>
+                                    <td>M</td>
+                                    <td style="width:12%;">100.000đ</td>
+                                    <td style="width:12%;">150.000đ</td>
+                                    <td>2</td>
+                                    <td style="width:12%;">200.000đ</td>
+                                </tr>  
+                            </tbody>
+                         
+                        </table>
+                        <div style="text-align:right;padding:0 10px;">
+                            <button class="btn-backMain">Quay lại</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(".list-detail").hide()
+        $(".add-importBill").hide()
+
+        $(".btn-back").click(function(){
+            $(".list-bill").show()
+            $(".list-detail").hide()
+        })
+
+        //khi nhấn thêm hoa sđơn Bán
+        $(".btn-add").click(function(){
+            $(".importBill-main").hide()
+            $(".add-importBill").show()
+        })
+
+        //khi nhấn nút quay lại ở trang Thêm
+        $(".btn-backMain").click(function(){
+            $(".importBill-main").show()
+            $(".add-importBill").hide()
+        })
+
+        function showDetail(id){
+            $(".list-bill").hide()
+            $(".list-detail").show()
+            $(".list-heading-detail").text("Chi tiết hóa đơn nhập" + id)
+        }
+    </script>
+</body>
+</html>

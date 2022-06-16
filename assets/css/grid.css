@@ -1,0 +1,312 @@
+.container{
+    padding-left:64px;
+    padding-right: 64px;
+    max-width: 1920px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -9px;
+    margin-right: -9px;
+}
+.col{
+    padding-left: 9px;
+    padding-right: 9px;
+}
+.row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+}
+.row.no-gutters .col {
+    padding-left: 0;
+    padding-right: 0;
+}
+.p-1,
+.p-2,
+.p-3,
+.p-4,
+.p-5,
+.p-6,
+.p-7,
+.p-8,
+.p-9,
+.p-10,
+.p-11,
+.p-12 {
+     display: block; /*dùng được cả vào element không có block */
+}
+
+.p-0 {
+    display: none;
+}
+
+.p-1 {
+    flex: 0 0 8.33333%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+    max-width: 8.33333%;/*Limit maximum width*/
+}
+
+.p-2 {
+    flex: 0 0 16.66667%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+    max-width: 16.66667%;
+}
+.p-2-4{
+    flex: 0 0 20%;
+    max-width:20%;
+}
+
+.p-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.p-4 {
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+}
+
+.p-5 {
+    flex: 0 0 41.66667%;
+    max-width: 41.66667%;
+}
+
+.p-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.p-7 {
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%;
+}
+
+.p-8 {
+    flex: 0 0 66.66667%;
+    max-width: 66.66667%;
+}
+
+.p-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+.p-10 {
+    flex: 0 0 83.33333%;
+    max-width: 83.33333%;
+}
+
+.p-11 {
+    flex: 0 0 91.66667%;
+    max-width: 91.66667%;
+}
+
+.p-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+/* Tablet*/
+@media (min-width:768px) and (max-width:1023px){
+    .container{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .row{
+        margin-left: -9px;
+        margin-right: -9px;
+    }
+    .col{
+        padding-left: 9px;
+        padding-right: 9px;
+    }
+
+    .t-1,
+    .t-2,
+    .t-3,
+    .t-4,
+    .t-5,
+    .t-6,
+    .t-7,
+    .t-8,
+    .t-9,
+    .t-10,
+    .t-11,
+    .t-12 {
+        display: block; /*dùng được cả vào element không có block */
+    }
+
+    .t-0 {
+        display: none;
+    }
+
+    .t-1 {
+        flex: 0 0 8.33333%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+        max-width: 8.33333%;/*Limit maximum width*/
+    }
+
+    .t-2 {
+        flex: 0 0 16.66667%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+        max-width: 16.66667%;
+    }
+
+    .t-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+
+    .t-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+
+    .t-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+
+    .t-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+
+    .t-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+
+    .t-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+
+    .t-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+
+    .t-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+
+    .t-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+    }
+
+    .t-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+/*Mobile*/
+@media (max-width:768px){
+    .container{
+        padding-left: 9px;
+        padding-right: 9px;
+        max-width: 100%;
+    }
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -4px;
+        margin-right: -4px;
+    }
+    
+    .row.no-gutters {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .col {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    
+    .row.no-gutters .col {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    
+    .m-1,
+    .m-2,
+    .m-3,
+    .m-4,
+    .m-5,
+    .m-6,
+    .m-7,
+    .m-8,
+    .m-9,
+    .m-10,
+    .m-11,
+    .m-12 {
+         display: block; /*dùng được cả vào element không có block */
+    }
+    
+    .m-0 {
+        display: none;
+    }
+    
+    .m-1 {
+        flex: 0 0 8.33333%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+        max-width: 8.33333%;/*Limit maximum width*/
+    }
+    
+    .m-2 {
+        flex: 0 0 16.66667%;/*xét chiều ngang hoặc là chiều dọc tùy và thẻ chứa nó*/
+        max-width: 16.66667%;
+    }
+    
+    .m-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+    
+    .m-4 {
+        flex: 0 0 33.33333%;
+        max-width: 33.33333%;
+    }
+    
+    .m-5 {
+        flex: 0 0 41.66667%;
+        max-width: 41.66667%;
+    }
+    
+    .m-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    
+    .m-7 {
+        flex: 0 0 58.33333%;
+        max-width: 58.33333%;
+    }
+    
+    .m-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+    
+    .m-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+    
+    .m-10 {
+        flex: 0 0 83.33333%;
+        max-width: 83.33333%;
+    }
+    
+    .m-11 {
+        flex: 0 0 91.66667%;
+        max-width: 91.66667%;
+    }
+    
+    .m-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

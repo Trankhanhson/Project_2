@@ -1,0 +1,28 @@
+.about-us-banner{
+    padding-bottom: 56.25%;
+    background: #fff url(https://www.coolmate.me/images/about-us-banner.jpg?edcc1efd8ea76e0664d01d1b5cbf7dc0) 50% no-repeat;
+    background-size: cover;
+}
+.story{
+    background-color: #f7f5f5;
+    padding: 125px 64px 0;
+    display: flex;
+}
+.about-us-text{
+    margin-top: 20px;
+    line-height:26px;
+    font-size: 14px;
+}
+.box{
+    padding:45px 44px;
+    background-color: #000;
+    width:350px;
+    color: #fff;
+    position: absolute;
+}
+.box-index{
+    
+    position: absolute;
+    font-size: 60px;
+    color: #fa6400;
+}

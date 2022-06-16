@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/Login.css">
+    <link rel="stylesheet" href="./assets/css/AddminBase.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Coolmate</title>
+</head>
+<body>
+    <div class="form-wrap">
+        <form class="login">
+            <h3>Đăng nhập</h3>
+            <div class="input-wrap">
+                <input class="UserName" class="userName" type="text" placeholder="UserName">
+            </div>
+            <div class="input-wrap">
+                <input value="Password" class="password" type="password" placeholder="Password">
+            </div>
+            <span class="btn-forgetPassword">Quên mật khẩu</span>
+            <input class="submit-login" type="submit" value="Đăng nhập">
+        </form>
+
+        <form action="" class="missPass">
+            <h3>Khôi phục mật khẩu</h3>
+            <div class="input-wrap">
+                <input type="text" placeholder="Nhập Email hoặc số điện thoại đăng ký">
+            </div>
+            <span class="btn-login">Đăng nhập</span>
+            <input class="submit-missPass" type="submit" value="Gửi">
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".btn-forgetPassword").click(function(e) {
+            $(".login").css("display", "none");
+            $(".missPass").css("display", "block");
+        })
+
+        $(".btn-login").click(function(e) {
+            $(".login").css("display", "block");
+            $(".missPass").css("display", "none");
+        })
+
+        $(".login").submit(function(e) {
+            let userName=$(".UserName").val();
+            let password=$(".password").val();
+            if(userName=="Khanhson" && password=="123"){
+                window.location.href="category.html";
+            }
+            else{
+                alert('Tài khoản hoặc mật khẩu không đúng vui lòng nhập lại')
+            }
+            e.preventDefault();
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coolmate</title>
+    <link rel="stylesheet" href="./assets/fonts/fonts/fontawesome-free-6.0.0-web/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/AddminBase.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+</head>
+<body>
+    <div class="wrap" style="width: 100%; height: 100%;overflow: hidden;">
+        <div class="header">
+            <a href="./category.html" class="logo" style="height:36px;width: 100px;">
+                <img src="https://www.coolmate.me/images/logo-coolmate.svg" alt="">
+            </a>
+            <a class="logout" href="./Login.html"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</a>
+        </div>
+        <div style="display:flex;">
+            <div class="navbar">
+                <a href="./category.html" class="category-option navbar-item">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    Loại sản phẩm
+                </a>
+                <a href="./product.html"class="product-option navbar-item" style="background-color:#d9d9d9;color:#011e39;">
+                    <i class="fa-solid fa-shirt"></i>
+                    Sản phẩm
+                </a>
+                <a href="./customer.html"class="customer-option navbar-item">
+                    <i class="fa-solid fa-users"></i>
+                    Khách hàng
+                </a>
+                <a href="./staff.html"class="staff-option navbar-item">
+                    <i class="fa-solid fa-user-gear"></i>
+                    Nhân viên
+                </a>
+                <a href="./import-bill.html" class="importBill-option navbar-item">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    Hóa đơn nhập
+                </a>
+                <div class="exportBill-option navbar-item"  style="position: relative;">
+                    <i class="fa-solid fa-table-columns"></i>
+                    Đơn đặt hàng
+                    <ul class="exportBill-list">
+                        <li class="exportBill-item"><a href="./Paied.html">Đã thanh toán</a></li>
+                        <li class="exportBill-item"><a href="./watingForProcess.html">Chờ xử lý</a></li>
+                        <li class="exportBill-item"><a href="./transporting.html">Đang vận chuyển</a></li>
+                        <li class="exportBill-item"><a href="./Deleted.html">Đă hủy</a></li>
+                    </ul>
+                </div>
+                <a href="./report.html"class="report-option navbar-item">
+                    <i class="fa-solid fa-chart-column"></i>
+                    Báo cáo
+                </a>
+            </div>
+    
+            <div class="row" style="flex: 1;padding:15px 10px 10px;background-color: #f6f5f5;">            
+                <div class="info col p-4">
+                    <div class="info-heading">
+                        Nhập thông tin sản phẩm
+                    </div>
+                    <form action="">
+                        <label for="input-loai">Loại sản phẩm</label>
+                        <select name="loaisp" id="input-loai" required>
+                            <option value="">--Mời chọn loại sản phẩm--</option>
+                            <option value="Áo polo">Áo polo</option>
+                            <option value="Áo T-shirt">Áo T-shirt</option>
+                            <option value="Áo sơ mi">Áo sơ mi</option>
+                            <option value="Áo thể thao">Áo thể thao</option>
+                        </select>
+                        <label for="input-Ma">Mã sản phẩm</label>
+                        <input type="text" id="input-Ma" placeholder="Nếu không nhập mã sẽ được tự động tạo">
+                        <label for="input-ten">Tên sản phẩm</label>
+                        <input type="text" id="input-ten" placeholder="Mời nhập tên sản phẩm..." required>
+                        <div style="width: 100%;display: flex;">
+                            <div style="width:50%;padding-right:5px;">
+                                <label for="input-mau">Màu</label>
+                                <div class="input__wrap">
+                                    <input type="text" id="input-mau" placeholder="Chọn màu"  required>
+                                    
+                                </div>
+                            </div>
+                            <div style="width:50%;padding-left:5px;">
+                                <label for="input-size">Size</label>
+                                <div class="input__wrap">
+                                    <input type="text" id="input-size" placeholder="Chọn size"  required>
+                                </div>
+                            </div>
+                        </div>
+                        <label for="input-img">Hình ảnh</label>
+                        <div style="display: flex;">
+                            <input accept="image/png, image/jpeg" class="input-img-1" id="input-img" type="file" style="line-height:40px;width: 50%;" required>   
+                            <input accept="image/png, image/jpeg" class="input-img-2" id="input-img" type="file" style="line-height:40px;width:50%;" required>   
+                        </div>                                            
+                        <div style="width: 100%;display: flex;">
+                            <div style="width:33.3333%;">
+                                <label for="input-quantity">Số lượng</label>
+                                <input id="input-quantity" type="text" placeholder="Số lượng" required>
+                            </div>
+                            <div style="width:33.3333%;padding-left:5px;">
+                                <label for="input-priceImport">Giá nhập</label>
+                                <input id="input-priceImport" type="text" placeholder="Nhập giá nhập" required>
+                            </div>
+                            <div style="width:33.3333%;padding-left:5px;">
+                                <label for="input-price">Giá bán</label>
+                                <input id="input-price" type="text" placeholder="Nhập giá bán" required>
+                            </div>  
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <button type="submit"  class="btn-form" style="background-color: rgba(44, 140, 15, 0.8);" onclick="addToProduct()">Thêm sản phẩm</button>
+                            <button  class="btn-form" style="background-color: rgba(227, 32, 21, 0.8);" onclick="newInput()">Nhập mới</button>
+                            <button class="btn-form" style="background-color: rgba(14, 87, 224, 0.8);" onclick="Update()">Cập nhật thông tin</button>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="list col p-8">
+                    <div class="list-heading">
+                        Danh sách sản phẩm
+                    </div>
+                    <div style="display:flex;">
+                        <input type="text" id="input-search" placeholder="Nhập mã,tên sản phẩm">
+                        <button class="btn-search" ><i class="fa-solid fa-magnifying-glass"></i> Tìm kiếm</button>
+                    </div>
+                    <table>                           
+                    </table>
+                    <button class='btn-displayList'>Hiện danh sách</button>
+                    <div class="page">
+                        <p>Số lượng sản phẩm: <span class="page-quantity">0</span></p>
+                        <ul>
+                            <li class="btn-page"><i class="fa-solid fa-angle-left"></i></li>
+                            <li class="btn-page">1</li>
+                            <li class="btn-page">2</li>
+                            <li class="btn-page">3</li>
+                            <li class="btn-page">4</li>
+                            <li class="btn-page"><i class="fa-solid fa-angle-right"></i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">    
+        var list= JSON.parse(localStorage.getItem('product')) || [];
+
+        function loaddata(){
+            var str=`<thead>
+                    <tr>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Màu</th>
+                            <th>Hình ảnh</th>
+                            <th>Size</th>
+                            <th>Số lượng</th>
+                            <th>Giá nhập</th>
+                            <th>Giá bán</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Thao tác</th>
+                        </tr></thead><tbody>`
+            for(var x of list){
+                str += `<tr style="height:30px;">
+                            <td style="width:12%;">${x.ma}</td>
+                            <td>${x.ten}</td>
+                            <td>${x.mau}</td>
+                            <td style="padding:0 5px;width:10%;">
+                                <div style="width:100%;display: flex;justify-content: space-between;">
+                                    <img class="img-1" style=" height:40px;" src="./assets/img/${x.img1}" alt="">
+                                    <img class="img-2" style=" height:40px;" src="./assets/img/${x.img2}" alt="">
+                                </div>
+                            </td>
+                            <td>${x.size}</td>
+                            <td>${x.soluong}</td>
+                            <td>${convertVND(x.gianhap)}</td>
+                            <td>${convertVND(x.gia)}</td>
+                            <td>${x.loai}</td>
+                            <td style="width:10%;">
+                                <div style="display:flex; justify-content:center;">
+                                    <i title="Sửa" class="fa-solid fa-screwdriver-wrench" onclick="Sua('${x.ma}')"></i>
+                                    <i title="Xóa" class="fa-solid fa-trash-can" onclick="Xoa('${x.ma}')"></i>
+                                </div>
+                            </td>
+                        </tr>`
+            }
+            str+="</tbody>"
+            $("table").html(str);
+            $(".page-quantity").text(list.length)
+        }
+
+        function convertVND(number) {
+            if(number==0) {return '0đ'}
+            var str=number;
+            var result=""
+            var length=str.length
+            var count=0
+            for(var i=length-1; i>=0; --i) {
+                if(count%3==0 && count!=0) {
+                    result=str[i]+'.'+result
+                }
+                else {
+                    result=str[i]+result
+                }
+                count++
+            }
+            return result+'đ'
+        }
+        
+        function srcImg(src){
+            let result=""
+            for(var i=src.length-1; i>=0; --i) {
+                if(src[i]!="\\"){
+                    result=src[i]+result
+                }
+                else{
+                    break
+                }
+            }
+            return result;
+        }
+
+        function addToProduct(){     
+            let ma=$("#input-Ma").val();
+            let ten=$("#input-ten").val();
+            let loai=$("#input-loai").val();
+            let mau=$("#input-mau").val();
+            let size=$("#input-size").val();
+            let img1=srcImg($(".input-img-1").val())
+            let img2=srcImg($(".input-img-2").val())
+            let soluong=$("#input-quantity").val();
+            let gianhap=$("#input-priceImport").val();
+            let gia=$("#input-price").val();
+            if(ma!="" && ten!="" && loai!="" && mau!="" && size != "" && img1 != "" && img2 != "" && soluong != "" && gia != ""){
+                let item=
+                {
+                    ma: ma,
+                    ten:ten,
+                    loai:loai,
+                    mau:mau,
+                    size:size,
+                    img1:img1,
+                    img2:img2,
+                    soluong:soluong,
+                    gianhap:gianhap,
+                    gia:gia
+                }
+                if((list.findIndex(a=>a.ma==ma))==-1){
+                    list.push(item);
+                    localStorage.setItem('product',JSON.stringify(list));
+                    loaddata();
+                }
+                else{
+                    alert("Mã này đã tồn tại vui lòng nhập lại")
+                }   
+            }
+            else{
+                alert("Bạn phải điền tất cả các trường thông tin sản phẩm")
+            }
+                    
+        }
+
+        /*Tìm kiếm*/
+        $(".btn-search").click(function(){
+            let value = $("#input-search").val();
+            let listSearch=[]
+            for(x of list){
+                if(x.ma==value || x.ten.toLowerCase().indexOf(value.toLowerCase())>-1){
+                    listSearch.push(x);
+                }
+            }
+            var str=`<thead>
+                    <tr>
+                            <th>Mã sản phẩm</th>
+                            <th>Tên sản phẩm</th>
+                            <th>Màu</th>
+                            <th>Hình ảnh</th>
+                            <th>Size</th>
+                            <th>Số lượng</th>
+                            <th>Giá nhập</th>
+                            <th>Giá bán</th>
+                            <th>Loại sản phẩm</th>
+                            <th>Thao tác</th>
+                        </tr></thead><tbody>`
+            for(var x of listSearch){
+                str += `<tr style="height:30px;">
+                            <td style="width:12%;">${x.ma}</td>
+                            <td>${x.ten}</td>
+                            <td>${x.mau}</td>
+                            <td style="padding:0 5px;width:10%;">
+                                <div style="width:100%;display: flex;justify-content: space-between;">
+                                    <img class="img-1" style=" height:40px;" src="./assets/img/${x.img1}" alt="">
+                                    <img class="img-2" style=" height:40px;" src="./assets/img/${x.img2}" alt="">
+                                </div>
+                            </td>
+                            <td>${x.size}</td>
+                            <td>${x.soluong}</td>
+                            <td>${convertVND(x.gianhap)}</td>
+                            <td>${convertVND(x.gia)}</td>
+                            <td>${x.loai}</td>
+                            <td style="width:10%;">
+                                <div style="display:flex; justify-content:center;">
+                                    <i title="Sửa" class="fa-solid fa-screwdriver-wrench" onclick="Sua('${x.ma}')"></i>
+                                    <i title="Xóa" class="fa-solid fa-trash-can" onclick="Xoa('${x.ma}')"></i>
+                                </div>
+                            </td>
+                        </tr>`
+            }
+            str+="</tbody>"
+            $("table").html(str);
+            $(".page-quantity").text(list.length)
+            $(".btn-displayList").css("display", "block") //hiển thị nút hiện danh sách
+        })
+
+        /*Hiện danh sách*/
+        $(".btn-displayList").click(function(){
+            loaddata();
+            $(".btn-displayList").css("display", "none")
+        })
+
+        function newInput(){
+            $("#input-Ma").val(null);
+            $("#input-ten").val(null);
+            $("#input-loai").val(null);         
+            $("#input-mau").val(null);
+            $("#input-size").val(null);
+            $(".input-img-1").val(null)
+            $(".input-img-2").val(null)            
+            $("#input-quantity").val(null);         
+            $("#input-price").val(null);
+            $("#input-priceImport").val(null);
+        }
+
+        function Update(){
+            let ma=$("#input-Ma").val();
+            let ten=$("#input-ten").val();
+            let loai=$("#input-loai").val();
+            let mau=$("#input-mau").val();
+            let size=$("#input-size").val();
+            let img1=srcImg($(".input-img-1").val())
+            let img2=srcImg($(".input-img-2").val())
+            let soluong=$("#input-quantity").val();
+            let gia=$("#input-price").val();
+            let gianhap=$("#input-priceImport").val();
+            let item=
+            {
+                ma: ma,
+                ten:ten,
+                loai:loai,
+                mau:mau,
+                size:size,
+                img1:img1,
+                img2:img2,
+                soluong:soluong,
+                gia:gia,
+                gianhap:gianhap
+            }
+            if (!(ma!="" && ten!="" && loai!="" && mau!="" && size != "" && img1 != "" && img2 != "" && soluong != "" && gia != "" && gianhap!= "")) 
+            {
+                alert("Bạn phải điền tất cả các trường");
+            }
+            else{
+                for (x of list) {
+                    if (x.ma == ma) {
+                        x.ten = ten;
+                        x.loai=loai;
+                        x.mau=mau;
+                        x.size=size;
+                        x.img1=img1;
+                        x.img2=img2;
+                        x.soluong=soluong;
+                        x.gia=gia;
+                        x.gianhap=gianhap
+                        break;
+                    }
+                }
+                localStorage.setItem('product',JSON.stringify(list));
+                loaddata();
+            }
+
+            
+        }
+
+        function deleteAll(){           
+            if(confirm("Bạn chắc chắn muốn xóa những sản phẩm được check!")){
+                let check=$(".checkbox")
+                for(var x of check){
+                    if(x.checked==true){
+                        for(var i=0;i<list.length;i++){
+                            if(list[i].ma==$(x).val()){
+                                list.splice(i,1)
+                            }
+                        }
+                    }
+                }
+                localStorage.setItem('product',JSON.stringify(list));
+                loaddata();
+            }
+        }
+
+        function Sua(ma){
+            for(var x of list){
+                if(x.ma==ma){
+                    $("#input-Ma").val(x.ma);
+                    $("#input-ten").val(x.ten);
+                    $("#input-loai").val(x.loai);         
+                    $("#input-mau").val(x.mau);
+                    $("#input-size").val(x.size);   
+                    $("#input-quantity").val(x.soluong);         
+                    $("#input-price").val(x.gia);
+                    $("#input-priceImport").val(x.gianhap);
+                }
+            }           
+        }
+        function Xoa(ma){
+            if(confirm("Bạn chắc chắn muốn xóa!")){
+                for(var i = 0; i < list.length; i++){
+                    if(list[i].ma==ma){
+                        list.splice(i, 1);
+                        break;
+                    }
+                }
+                localStorage.setItem('product',JSON.stringify(list))
+                loaddata();
+            }
+            $(".btn-displayList").css("display", "none")
+            
+        };
+        loaddata();
+
+    </script>
+    
+</body>
+</html>
